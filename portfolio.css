@@ -1,0 +1,11 @@
+a{
+    cursor : pointer;
+}
+#name{
+    border-top:5px solid #0000FF;
+    background:#00FFFF;
+    border-bottom:5px solid #0000FF;
+}
+#topMenu{
+    text-align:center;
+}

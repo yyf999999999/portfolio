@@ -4,17 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>靴下のポートフォリオ</title>
-    <link rel="styleSheet" href="portfolio.css">
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-    <div id="topMenu">
-        <h1 id="name">靴下のポートフォリオ</h1>
-        <a onclick="obj=document.getElementById('test').style;
-        obj.display=(obj.display=='none')?'inline-block':'none';">開けゴマ</a><br>
-        <div id="test">
-            <p>展開</p>
+    <header>
+        <h1 class="topMenu">靴下のポートフォリオ</h1>
+        <div class="split">
+            <a class="topMenu" onclick="scrollToSection('introduction')">▼自己紹介</a>
+            <a class="topMenu" onclick="scrollToSection('skill')">▼スキル</a>
+            <a class="topMenu" onclick="scrollToSection('work')">▼作品集</a>
         </div>
-    </div>
-    
+    </header>
+    <section id="introduction">
+        <h1>自己紹介</h1>
+        <p class="centerLeftSentence">
+            ペンネーム:靴下(yyf99)<br>
+            年齢:17歳<br>
+            所属:大阪公立大学高等工業専門学校<br>
+            活動:主にゲームや自主学習で使う機能の作成
+        </p>
+    </section>
+    <section id="skill">
+        <h1>スキル</h1>
+        <h2>プログラミング言語</h2>
+        <div class="programingLanguage">
+            <image href="image/javascript_icon.png"></image>
+            <h3>JavaScript</h3>
+            何も見ずに単純なアクションゲームが作れる程度
+        </div>
+        <h2>資格</h2>
+    </section>
+    <section id="work">
+        <h1>作品集</h1>
+    </section>
+    <script>
+        function scrollToSection(id){
+            document.getElementById(id).scrollIntoView({behavior: "smooth"});
+        }
+    </script>
 </body>
 </html>

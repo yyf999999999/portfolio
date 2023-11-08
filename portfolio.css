@@ -1,11 +1,26 @@
+body{
+    margin:0px;
+}
 a{
-    cursor : pointer;
+    cursor:pointer;
 }
-#name{
-    border-top:5px solid #0000FF;
+.topMenu{
+    margin:0px;
+    border:2.5px solid #0000FF;
     background:#00FFFF;
-    border-bottom:5px solid #0000FF;
+    width:100%;
 }
-#topMenu{
+header{
     text-align:center;
+}
+section{
+    text-align:center;
+}
+.split{
+    display:flex;
+    justify-content:space-between;
+}
+.centerLeftSentence{
+    display:inline-block;
+    text-align:left;
 }

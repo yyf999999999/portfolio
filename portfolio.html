@@ -14,6 +14,11 @@
             <a class="topMenu" onclick="scrollToSection('skill')">▼スキル</a>
             <a class="topMenu" onclick="scrollToSection('work')">▼作品集</a>
         </div>
+        <script>
+            function scrollToSection(id){
+                document.getElementById(id).scrollIntoView({behavior: "smooth"});
+            }
+        </script>
     </header>
     <section id="introduction">
         <h1>自己紹介</h1>
@@ -26,21 +31,73 @@
     </section>
     <section id="skill">
         <h1>スキル</h1>
-        <h2>プログラミング言語</h2>
-        <div class="programingLanguage">
-            <image href="image/javascript_icon.png"></image>
-            <h3>JavaScript</h3>
-            何も見ずに単純なアクションゲームが作れる程度
+        <h3>プログラミング言語</h3>
+        <p>どのプログラミング言語をどれほど使えるかを簡単に解説したものです</p>
+        <div class="parentElement">
+            <div class="childElement">
+                <img src="image/javascript_icon.png"></img>
+                <h5>JavaScript</h5>
+                <p>何も見ずに単純なアクションゲームが作れる程度</p>
+            </div>
+            <div class="childElement">
+                <img src="image/codinghtml_icon.png">
+                <h5>html/css</h5>
+                <p>調べながらこのポートフォリオが作成できる程度</p>
+            </div>
+            <div class="childElement">
+                <img src="image/python_icon.png"></img>
+                <h5>python</h5>
+                <p>仮想環境を構築してライブラリを使える程度</p>
+            </div>
         </div>
-        <h2>資格</h2>
+        <h3>資格</h3>
+        <p>所持している資格です</p>
+        <p id="qualification">英検2級</p>
+        <script>
+            const qualifications=document.getElementById("qualification");
+            const qualification=qualifications.innerHTML.split(" ");
+            qualifications.innerHTML="";
+            qualification.forEach((word,index)=>{
+                const span=document.createElement("span");
+                span.classList.add("back");
+                span.innerHTML=word;
+                qualifications.appendChild(span);
+                qualifications.innerHTML+=" ";
+            })
+        </script>
     </section>
     <section id="work">
         <h1>作品集</h1>
+        <h3>中学時代の作品</h3>
+        <p>
+            中学生のころにScratchで制作した作品の一部を置いています<br>
+            (画像をクリックしてurlに飛べます)
+        </p>
+        <div class="parentElement">
+            <div class="childElement">
+                <a href="https://scratch.mit.edu/projects/550561891/" target="_blank">
+                    <img src="image/ballcorocoro3D2.png">
+                </a>
+                <h5>ボールコロコロ3D2</h5>
+                <p>シンプルな3Dゲーム</p>
+            </div>
+            <div class="childElement">
+                <a href="https://scratch.mit.edu/projects/571837353/" target="_blank">
+                    <img src="image/roll_and_run.png">
+                </a>
+                <h5>roll and run!</h5>
+                <p>ボールコロコロ3D2から進化した3Dゲーム</p>
+            </div>
+            <div class="childElement">
+                <a href="https://scratch.mit.edu/projects/643606659/" target="_blank">
+                    <img src="image/new_horizontalscroll_actiongame2.png">
+                </a>
+                <h5>新横スクロールアクションゲーム2</h5>
+                <p>ギミックが多彩な2Dアクションゲーム</p>
+            </div>
+        </div>
+        <h3>高専時代の作品(個人)</h3>
+        <h3>高専時代の作品(学校行事)</h3>
     </section>
-    <script>
-        function scrollToSection(id){
-            document.getElementById(id).scrollIntoView({behavior: "smooth"});
-        }
-    </script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Englishwords_study.css">
+    <title>英単語</title>
+</head>
+<body>
+    <h1>英単語</h1>
+    <h3>使い方</h3>
+    <ol>
+        <li>英単語を"単語を入力"の欄に入力する</li>
+        <li>"翻訳"を押し、google翻訳されたものをコピーする</li>
+        <li>"翻訳後の言葉"の欄にペーストし、"まとめる"ボタンを押す</li>
+        <li>"表を作成"ボタンを押して表を作成する(表コードをコピー&ペーストするともう一度同じ表を作成できる)</li>
+        <li>表が4行以上あると"問題出題"ボタンを押して4択問題を解ける</li>
+    </ol>
+    <label for="word">単語入力</label>
+    <input type="text" id="word">
+    <button id="button" onclick="keepWords()">入力する</button>  
+    <p id="savedWord"></p>
+    <a href="https://translate.google.com/?hl=ja&sl=en&tl=ja&text=&op=translate" id="url" target="_blank">翻訳</a>
+    <br>
+    <label for="translatedWord">翻訳後の言葉</label>
+    <input type="text" id="translatedWord">
+    <button id="synthesis" onclick="synthesisWords()">まとめる</button>
+    <br>
+    <label for="tableWord">表コード(コピーして保存してね)</label>
+    <input type="text" id="tableWord">
+    <button id="makingTable" onclick="tableMaker()">表を作成</button>
+    <br>
+    <button id="buttonProblem" onclick="problem()">問題出題(単語が4つ以上必要)</button>
+    <p id="errorProblem"></p>
+    <p id="choice"></p>
+    <!--
+    <label for="answer">答え</label>
+    <input id="answer">
+    -->
+    <button id="writeAnswer" onclick="answerWrite(1)">　➀　</button>
+    <button id="writeAnswer" onclick="answerWrite(2)">　➁　</button>
+    <button id="writeAnswer" onclick="answerWrite(3)">　➂　</button>
+    <button id="writeAnswer" onclick="answerWrite(4)">　➃　</button>
+    <p id="answerConfirmation"></p>
+    <table border="1" id="table">
+        <tr>
+            <th>English</th>
+            <th>日本語</th>
+        </tr>
+    </table>
+    <script type="text/javascript" src="Englishwords_study.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="力の分解,合成.css">
+    <title>力の分解,合成</title>
+</head>
+<body>
+    <h1>力の分解,合成</h1>
+    <label for="roundOff">値を四捨五入して表示 現在の状態:</label>
+    <button id="roundOff" onclick="defRoundOff()">off</button>
+    <h2>力の分解</h2>
+    <label for="force">力の大きさ</label>
+    <input type="text" id="force">
+    <br>
+    <label for="direction">力の向き</label>
+    <input type="text" id="direction">
+    <br>
+    <button id="button" onclick="calculation(1)">出力</button>
+    <p id="result">結果:</p>
+    <h2>力の合成</h2>
+    <label for="force1">力の大きさ1</label>
+    <input type="text" id="force1">
+    <label for="direction1">力の向き1</label>
+    <input type="text" id="direction1">
+    <br>
+    <label for="force2">力の大きさ2</label>
+    <input type="text" id="force2">
+    <label for="direction2">力の向き2</label>
+    <input type="text" id="direction2">
+    <br>
+    <button onclick="calculation(2)">出力</button>
+    <p id="result1">結果:</p>
+    <script type="text/javascript" src="力の分解,合成.js"></script>
+</body>
+</html>

@@ -5,6 +5,10 @@ body{
 a{
     cursor:pointer;
 }
+#introduction a{
+    text-decoration:none;
+    margin-left:3px;margin-right:3px;
+}
 .topMenu{
     margin:0px;
     border:2.5px solid #4444FF;

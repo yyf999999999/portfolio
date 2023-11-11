@@ -18,6 +18,15 @@
                 qualifications.innerHTML+=" ";
             })
         }
+        function scrollToSection(id){
+            //document.getElementById(id).scrollIntoView({behavior: "smooth"});
+            const targetElement=document.getElementById(id);
+            const adjustmentTop=-100;
+            window.scrollTo({
+                top:targetElement.offsetTop+adjustmentTop,
+                behavior:"smooth"
+            });
+        }
     </script>
 </head>
 <body>
@@ -28,11 +37,6 @@
             <a class="topMenu" onclick="scrollToSection('skill')">▼スキル</a>
             <a class="topMenu" onclick="scrollToSection('work')">▼作品集</a>
         </div>
-        <script>
-            function scrollToSection(id){
-                document.getElementById(id).scrollIntoView({behavior: "smooth"});
-            }
-        </script>
     </header>
     <section id="introduction">
         <h1>自己紹介</h1>

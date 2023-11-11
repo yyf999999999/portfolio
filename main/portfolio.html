@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>靴下のポートフォリオ</title>
     <link rel="stylesheet" href="portfolio.css">
+    <script>
+        function ownDraw(id){
+            const qualifications=document.getElementById(id);
+            const qualification=qualifications.innerHTML.split(" ");
+            qualifications.innerHTML="";
+            qualification.forEach((word,index)=>{
+                const span=document.createElement("span");
+                span.classList.add("back");
+                span.innerHTML=word;
+                qualifications.appendChild(span);
+                qualifications.innerHTML+=" ";
+            })
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -44,6 +58,7 @@
         <h1>スキル</h1>
         <h3>プログラミング言語</h3>
         <p>どのプログラミング言語をどれほど使えるかを簡単に解説したものです</p>
+        <h5>よく使うもの</h5>
         <div class="parentElement">
             <div class="childElement">
                 <img src="../image/icons8-javascript-48.png" alt="画像が表示できません">
@@ -61,33 +76,58 @@
                 <p>仮想環境を構築してライブラリを使える程度</p>
             </div>
         </div>
+        
+        <h5>あまり使わないもの</h5>
+        <p id="language">C++</p>
+        <script>ownDraw("language");</script>
+        <h3>開発環境,アプリ</h3>
+        <p>使ったことがある開発環境やアプリを示したものです</p>
+        <h5>よく使うもの</h5>
         <div class="parentElement">
             <div class="childElement">
-                <img src="../image/icons8-arduino-48.png" alt="画像が表示できません">
-                <h5>Arduino</h5>
-                <p>調べながら七セグなどを扱える程度</p>
+                <img src="../image/icons8-visual-studio-48.png" alt="画像が表示できません">
+                <h5>VScode</h5>
+                <p>
+                    pythonの授業や高専祭の準備、趣味で使用<br>
+                    拡張機能のダウンロードやgithubへのプッシュ、<br>
+                    仮想環境の構築ができる程度
+                </p>
             </div>
+            <div class="childElement">
+                <img src="../image/icons8-グーグルコル-48.png" alt="画像が表示できません">
+                <h5>GoogleColab</h5>
+                <p>
+                    pyhtonの授業で使用<br>
+                    単純なマークアップやpythonで作品制作ができる程度
+                </p>
+            </div>
+            <div class="childElement">
+                <img src="../image/icons8-github-48.png" alt="画像が表示できません">
+                <h5>github</h5>
+                <p>
+                    学校の授業や趣味で使用<br>
+                    主にVScodeで使うが、コマンドでもできる<br>
+                    pagesを使って作品を公開できる程度
+                </p>
+            </div>
+        </div>
+        <div class="parentElement">
             <div class="childElement">
                 <img src="../image/icons8-Scratch-48.png" alt="画像が表示できません">
                 <h5>Scratch</h5>
-                <p>かなり手の込んだゲームを作れる程度</p>
+                <p>
+                    中学生のころ趣味で使用<br>
+                    かなり手の込んだゲームを作れる程度
+                </p>
             </div>
         </div>
+        <h5>あまり使わないもの</h5>
+        <p id="environment">TinkerCAD ArduinoIDE MakeCode Deeds-DCS Ambient</p>
+        <script>ownDraw("environment");</script>
         <h3>資格</h3>
         <p>所持している資格です</p>
         <p id="qualification">英検2級</p>
-        <script>
-            const qualifications=document.getElementById("qualification");
-            const qualification=qualifications.innerHTML.split(" ");
-            qualifications.innerHTML="";
-            qualification.forEach((word,index)=>{
-                const span=document.createElement("span");
-                span.classList.add("back");
-                span.innerHTML=word;
-                qualifications.appendChild(span);
-                qualifications.innerHTML+=" ";
-            })
-        </script>
+        <script>ownDraw("qualification");</script>
     </section>
     <section id="work">
         <h1>作品集</h1>
@@ -182,6 +222,8 @@
         <a target="_blank" href="https://icons8.com/icon/19318/%E3%83%97%E3%83%AC%E3%82%A4%E5%8B%95%E7%94%BB">プレイ動画</a> アイコン by <a target="_blank" href="https://icons8.com">Icons8</a><br>
         <a target="_blank" href="https://icons8.com/icon/62856/github">GitHub</a> アイコン by <a target="_blank" href="https://icons8.com">Icons8</a><br>
         <a target="_blank" href="https://icons8.com/icon/Of4lZV2lwBQI/arduino">Arduino</a> アイコン by <a target="_blank" href="https://icons8.com">Icons8</a><br>
+        <a target="_blank" href="https://icons8.com/icon/ezj3zaVtImPg/visual-studio">Visual Studio</a> アイコン by <a target="_blank" href="https://icons8.com">Icons8</a><br>
+        <a target="_blank" href="https://icons8.com/icon/lOqoeP2Zy02f/%E3%82%B0%E3%83%BC%E3%82%B0%E3%83%AB%E3%82%B3%E3%83%AB">グーグルコル</a> アイコン by <a target="_blank" href="https://icons8.com">Icons8</a><br>
     </section>
 </body>
 </html>

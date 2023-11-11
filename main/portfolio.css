@@ -11,7 +11,7 @@ a{
 }
 .topMenu{
     margin:0px;
-    border:2.5px solid #4444FF;
+    border:2.5px solid #8888FF;
     background:#88FFFF;
     width:100%;
 }
@@ -38,5 +38,5 @@ section{
     justify-content:space-between;
 }
 .back{
-    background-color:#88FF88;
+    background-color:#66FF66;
 }
